@@ -1,26 +1,52 @@
-// Write your solution in this file!
+// // Write your solution in this file!
+// const employee = {
+//     name: `AJ`,
+//     streetAddress: `Home`
+// }
+// function updateEmployeeWithKeyAndValue(employee, key, value){
+//     return {...employee, [key]: value}; 
+//     //^^ is basically short-form of this:
+//     //const newEmployees = {...employee};
+//     //employee[key] = value;
+//     //return newEmployees;
+// }
+// function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
+//     employee[key] = value;
+//     return employee;
+// }
+// function deleteFromEmployeeByKey(employee, key){
+//     const newEmployee = {...employee};
+//     delete newEmployee[key];
+//     return newEmployee;
+// }
+// function destructivelyDeleteFromEmployeeByKey(employee, key){
+//     delete employee[key];
+//     return employee;
+// }
+// //console.log(deleteFromEmployeeByKey(employee, `name`));
+
 const employee = {
-    name: `AJ`,
-    streetAddress: `Home`
+    name: 'AJ',
+    streetAddress: 'Adams Farm'
 }
-function updateEmployeeWithKeyAndValue(employee, key, value){
-    return {...employee, [key]: value}; 
-    //^^ is basically short-form of this:
-    //const newEmployees = {...employee};
-    //employee[key] = value;
-    //return newEmployees;
+
+const updateEmployeeWithKeyAndValue = (obj, key, value) => {
+    let newObj = {...obj, [key]: value};
+    return newObj;
 }
-function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
-    employee[key] = value;
-    return employee;
+
+const destructivelyUpdateEmployeeWithKeyAndValue = (obj, key, value) => {
+    obj[key] = value;
+    return obj;
 }
-function deleteFromEmployeeByKey(employee, key){
-    const newEmployee = {...employee};
-    delete newEmployee[key];
-    return newEmployee;
+
+const deleteFromEmployeeByKey = (obj, key) => {
+    let newObj = {...obj};
+    delete newObj[key];
+    return newObj;
 }
-function destructivelyDeleteFromEmployeeByKey(employee, key){
-    delete employee[key];
-    return employee;
+
+const destructivelyDeleteFromEmployeeByKey = (obj, key) => {
+    delete obj[key];
+    return obj;
 }
-//console.log(deleteFromEmployeeByKey(employee, `name`));
